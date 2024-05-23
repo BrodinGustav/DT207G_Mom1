@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stil för rubriker */
+h1, h2 {
+    color: #444;
+}
+
+/* Stil för formulär och formulärfält */
+form {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 600px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background: #5cb85c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: #4cae4c;
+}
+
+/* Stil för valideringsfel */
+ul {
+    background: #f2dede;
+    color: #a94442;
+    padding: 10px;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+/* Stil för avklarade kurser */
+.container {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.coursesDatabase {
+    background: #f9f9f9;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.coursesDatabase strong {
+    color: #555;
+}
+
+.coursesDatabase:last-child {
+    border-bottom: none;
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 620px) {
+    body {
+        padding: 40px;
+    }
+}
