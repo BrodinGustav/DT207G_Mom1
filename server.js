@@ -3,7 +3,9 @@ const bodyParser = require("body-parser");          //Möjliggör för att läsa
 const mysql = require("mysql");                     //Import mySQL för anslutning
 const app = express();                              //Startar applikationen
 const port = 3000;                                  //Använder port 3000
+const path = require('path');
 
+app.set("views", path.join(__dirname, "views")); // Mapp för vyer
 app.set("view engine", "ejs");                      //EJS används som view-engine
 app.use(express.static("public"));                  //Statiska filer i katalog public
 app.use(bodyParser.urlencoded({extended:true}));    //Nu kan vi läsa in alla typer av formulärdata
@@ -26,6 +28,9 @@ connection.connect((error) => {
     console.log("Connected through mySql");
 });
 
+app.get('/about', function(req, res) {  //Åtkomst till sidan about
+    res.render('about');
+});
 
  
 //Route för att Hämta kurser från databas
