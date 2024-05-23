@@ -30,3 +30,42 @@
         <input type="text" id="progression" name="progression">
         <input type="submit" value="Lägg till kurs">
     </form>
+
+     <!---Formulär för att radera kurs-->
+     <div>
+        <form method="post" action="/remove-course">
+            <label for="courseCodeToRemove">Ange kurskod som önskas raderas:</label>
+            <input type="text" id="courseCodeToRemove" name="courseCodeToRemove">
+            <input type="submit" value="Radera">
+        </form>
+        <% if (errors && errors.length > 0) { %>
+            <ul>
+                <% errors.forEach((error) => { %>
+                    <li><%= error %></li>
+                <% }); %>
+            </ul>
+        <% } %>
+    </div>
+
+    <!--Div för utskrift av kurser-->
+    <div class="container">
+        <h2>Avklarade kurser</h2>
+        <% if (data && data.length > 0) { %> <!-- Kontrollerar om det finns data att visa -->
+            <ul>
+                <% data.forEach((result) => { %> <!-- Loopar igenom result (kursobjekt) -->
+                    <li class="coursesDatabase">
+                        <strong>Kurskod:</strong> <%= result.courseCode %><br>
+                        <strong>Kursnamn:</strong> <%= result.courseName %><br>
+                        <strong>Syllabus:</strong> <%= result.courseSyllabus %><br>
+                        <strong>Kursprogression:</strong> <%= result.courseProgression %><br>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>Inga kurser finns tillgängliga.</p>
+        <% } %>
+    </div>
+</body>
+</html>
+
+
