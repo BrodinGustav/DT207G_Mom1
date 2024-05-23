@@ -91,6 +91,16 @@ ul li {
     border-bottom: none;
 }
 
+.about{
+    display:flex;
+    flex-direction: column;
+    gap:2em;
+    width:50%;
+    line-height: 1.3em;
+    box-shadow: 2px 10px 15px black;
+    color:black;
+}
+
 /*MEDIA QUERIES*/
 
 @media (max-width: 620px) {
