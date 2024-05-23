@@ -9,19 +9,21 @@
 <body>
     <h1>Om sidan</h1>
     <nav>
-        <a href="index.ejs">CV</a>
+        <a href="/">CV</a>
     </nav>
     <ul class="about">
-        <li>Webbplatsens syfte är att användarvänligt kunna uppdatera och radera elevens CV gällande färdiga universitetskurser. </li>
-        <li>mySQL-databas har använt för aktuell applikation.</li>
-        <li>Uppgiften har varit utmanande med allt nytt kring databasanslutning och skapande kring tables etc.</li>
-        <li>Lärdom tas med kring hantering av "ejs" och tillvägagångssättet att rendera undersidor genom get-metod.</li>
-        <li>Kunskap kring middleware känns nyttig som exempelvis app.get för att härleda till "views"-mappen för undersida.</li>
+        <li>Denna webbplats är en enkel applikation för att hantera kurser. Användare kan lägga till nya kurser genom att fylla i ett formulär med kurskod, kursnamn, kursplan (syllabus) och kursprogression. 
+            Dessutom finns det möjlighet att radera kurser genom att ange kurskoden för den kurs som ska tas bort. </li>
+        <li>Webbplatsen är utformad för att ge användarna en enkel och intuitiv plattform för att hantera sina kurser. Funktionaliteten inkluderar:</li>
+        <li>Lägg till kurs: Användare kan fylla i ett formulär med kursdetaljer och lägga till kursen till databasen.</li>
+        <li>Radera kurs: Användare kan ta bort en kurs genom att ange kurskoden.</li>
+        <li>Visa kurser: Alla tillgängliga kurser visas på startsidan, vilket ger användarna en överblick över de kurser som finns tillgängliga i databasen.</li>
+        <li>Webbplatsen använder en MySQL-databas för att lagra kursinformation.
+        <li>Användning av MySQL-databasen för att lagra och hämta data var en central del av uppgiften. 
+            Det krävde förståelse för SQL-frågor och hur man interagerar med databasen via Node.js.</li>
+        <li>Genom att använda EJS som template-motor kunde vi dynamiskt rendera innehåll på webbsidorna baserat på data från databasen, vilket ger en mer interaktiv och användarvänlig upplevelse.</li>
         <li>Det var en tidskrävande uppgift med mycket "trial and error", men slutresultat är tillfredsställande och mycket nytt har getts!</li>
     </ul>
 </body>
 </html>
 
-
-<!--En sida som beskriver webbplatsen och dess syfte, samt information om vilken databas-server som använts.
-Skriv även om slutsatser du dragit av uppgiften.->>
