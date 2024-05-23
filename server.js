@@ -5,7 +5,7 @@ const app = express();                              //Startar applikationen
 const port = 3000;                                  //Använder port 3000
 const path = require('path');
 
-app.set("views", path.join(__dirname, "views")); // Mapp för vyer
+app.set("views", path.join(__dirname, "/views")); // Mapp för vyer
 app.set("view engine", "ejs");                      //EJS används som view-engine
 app.use(express.static("public"));                  //Statiska filer i katalog public
 app.use(bodyParser.urlencoded({extended:true}));    //Nu kan vi läsa in alla typer av formulärdata
